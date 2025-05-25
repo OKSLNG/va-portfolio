@@ -5,51 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Care Dianne Buenaflor – SDR & Social Media Specialist</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script type="module">
+    import { createIcons, icons } from "https://unpkg.com/lucide@latest";
+    createIcons({ icons });
+  </script>
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80');
       background-size: cover;
-      background-position: center;
       background-attachment: fixed;
+      background-position: center;
     }
+
     .bg-overlay {
       background: rgba(0, 0, 0, 0.75);
     }
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    .fade-section {
+      transition: all 0.5s ease;
+      transform: translateY(40px);
+      opacity: 0;
+    }
+
+    .fade-section.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
   </style>
 </head>
-<body class="text-white text-[20px] sm:text-[21px]">
+<body class="text-white text-[19px] sm:text-[20px]">
 
-  <!-- Overlay Wrapper -->
-  <div class="bg-overlay min-h-screen w-full">
-    
-    <!-- Header -->
-    <header class="py-16 text-center">
-      <img src="profile.jpg" alt="Care Dianne Buenaflor"
-           class="w-56 h-56 mx-auto rounded-full border-4 border-white shadow-xl mb-6 object-cover" />
-      <h1 class="text-5xl font-bold">Care Dianne Buenaflor</h1>
-      <p class="text-lg text-gray-300 mt-2">📍 Iloilo, Philippines</p>
-      <p class="mt-3 text-2xl font-medium text-blue-300">
-        💼 Sales Development Representative & Social Media Specialist
-      </p>
-      <div class="mt-4 text-lg text-gray-300 leading-relaxed">
-        📧 buenaflorcaredianne@gmail.com<br>
-        📱 0995-640-0696
-      </div>
-    </header>
+<div class="bg-overlay min-h-screen w-full">
+  <!-- Header -->
+  <header class="py-20 text-center">
+    <img src="profile.jpg" alt="Care Dianne Buenaflor"
+         class="w-60 h-60 mx-auto rounded-full border-4 border-white shadow-xl mb-6 object-cover" />
+    <h1 class="text-5xl font-bold">Care Dianne Buenaflor</h1>
+    <p class="text-lg text-gray-300 mt-2">📍 Iloilo, Philippines</p>
+    <p class="mt-3 text-2xl font-medium text-blue-300">
+      💼 Sales Development Representative & Social Media Specialist
+    </p>
+    <div class="mt-4 text-base text-gray-300 leading-relaxed">
+      📧 buenaflorcaredianne@gmail.com<br>
+      📱 0995-640-0696
+    </div>
+  </header>
 
-    <!-- Section Template -->
-    <section class="max-w-4xl mx-auto px-6 py-10">
-      <h2 class="text-3xl font-semibold mb-4">📝 Professional Summary</h2>
+  <main id="content">
+
+    <!-- Summary -->
+    <section class="max-w-4xl mx-auto px-6 py-12 fade-section">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-3">
+        <i data-lucide="file-text" class="w-7 h-7 text-blue-400 animate-pulse"></i>
+        Professional Summary
+      </h2>
       <p class="text-gray-200 leading-relaxed">
         To secure a responsible career opportunity while contributing to the growth of the company. I aim to impart knowledge and prove my potential in delivering consistent, reliable, and quality service, while developing a better career path.
       </p>
     </section>
 
     <!-- Core Competencies -->
-    <section class="bg-gray-800 bg-opacity-80 py-10">
+    <section class="bg-gray-800 bg-opacity-80 py-12 fade-section">
       <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold mb-4">🧠 Core Competencies</h2>
+        <h2 class="text-3xl font-semibold mb-4 flex items-center gap-3">
+          <i data-lucide="brain" class="w-7 h-7 text-green-400 animate-bounce"></i>
+          Core Competencies
+        </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-200">
           <div>✔️ Sales Lead Generation</div>
           <div>✔️ Email Blasting</div>
@@ -65,39 +99,44 @@
     </section>
 
     <!-- Education -->
-    <section class="max-w-4xl mx-auto px-6 py-10">
-      <h2 class="text-3xl font-semibold mb-4">🎓 Education</h2>
+    <section class="max-w-4xl mx-auto px-6 py-12 fade-section">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-3">
+        <i data-lucide="graduation-cap" class="w-7 h-7 text-yellow-300 animate-pulse"></i>
+        Education
+      </h2>
       <ul class="list-disc list-inside text-gray-200 space-y-3">
-        <li><strong>University of San Agustin</strong> – BS in Management Accounting (2018–2022)<br>GIASA Scholar, UNIFAST Scholar</li>
-        <li><strong>Colegio Del Sagrado Corazon De Jesus</strong> – Senior High School (2016–2018)</li>
+        <li><strong>University of San Agustin</strong> – BS in Management Accounting (2018–2022)</li>
+        <li><strong>Colegio Del Sagrado Corazon De Jesus</strong> – Senior High (2016–2018)</li>
         <li><strong>Jalandoni Memorial National High School</strong> – Junior High (2012–2016)</li>
-        <li><strong>A.L Jayme Elementary School</strong> – Bacolod, Negros Occidental</li>
+        <li><strong>A.L Jayme Elementary School</strong> – Bacolod</li>
       </ul>
     </section>
 
     <!-- Experience -->
-    <section class="bg-gray-800 bg-opacity-80 py-10">
+    <section class="bg-gray-800 bg-opacity-80 py-12 fade-section">
       <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold mb-4">💼 Professional Experience</h2>
+        <h2 class="text-3xl font-semibold mb-4 flex items-center gap-3">
+          <i data-lucide="briefcase" class="w-7 h-7 text-orange-300 animate-bounce"></i>
+          Professional Experience
+        </h2>
         <div class="space-y-6 text-gray-200">
           <div>
-            <h3 class="font-bold text-xl">Social Media Marketer – Callbox Iloilo (2021–2025)</h3>
+            <h3 class="font-bold text-xl">Social Media Marketer – Callbox (2021–2025)</h3>
             <ul class="list-disc list-inside mt-2">
-              <li>Appointment setting, lead prospecting</li>
-              <li>Used Zoominfo, LinkedHelper, HubSpot, OneCRM</li>
-              <li>Managed multiple LinkedIn profiles and campaigns</li>
+              <li>Lead generation and LinkedIn campaigns</li>
+              <li>Used Zoominfo, HubSpot, LinkedHelper</li>
             </ul>
           </div>
           <div>
             <h3 class="font-bold text-xl">Social Media Marketer – Dame Digital (OJT, 2021)</h3>
             <ul class="list-disc list-inside mt-2">
-              <li>Created Facebook/web templates, managed brand inventory</li>
+              <li>Created Facebook/web templates</li>
             </ul>
           </div>
           <div>
             <h3 class="font-bold text-xl">CSR/Financial Specialist – NEARSOL (2020)</h3>
             <ul class="list-disc list-inside mt-2">
-              <li>Resolved billing issues and delivered quality customer support</li>
+              <li>Resolved billing and customer support tasks</li>
             </ul>
           </div>
         </div>
@@ -105,39 +144,63 @@
     </section>
 
     <!-- Additional Info -->
-    <section class="max-w-4xl mx-auto px-6 py-10">
-      <h2 class="text-3xl font-semibold mb-4">📌 Additional Information</h2>
+    <section class="max-w-4xl mx-auto px-6 py-12 fade-section">
+      <h2 class="text-3xl font-semibold mb-4 flex items-center gap-3">
+        <i data-lucide="list-checks" class="w-7 h-7 text-pink-400 animate-pulse"></i>
+        Additional Information
+      </h2>
       <ul class="list-disc list-inside text-gray-200 space-y-3">
-        <li>Oversees campaign management and analytics</li>
-        <li>Expert in LinkedIn, SalesNavigator, HubSpot, OneCRM</li>
-        <li>Quick typing, Canva-savvy, and strong team collaboration</li>
+        <li>Expert in LinkedIn, SalesNavigator, HubSpot</li>
+        <li>Quick typing, Canva-savvy, CRM tools</li>
       </ul>
     </section>
 
     <!-- Trainings -->
-    <section class="bg-gray-800 bg-opacity-80 py-10">
+    <section class="bg-gray-800 bg-opacity-80 py-12 fade-section">
       <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold mb-4">🏅 Trainings & Career Highlights</h2>
+        <h2 class="text-3xl font-semibold mb-4 flex items-center gap-3">
+          <i data-lucide="badge-check" class="w-7 h-7 text-purple-400 animate-bounce"></i>
+          Trainings & Career Highlights
+        </h2>
         <ul class="list-disc list-inside text-gray-200 space-y-3">
           <li>Certified Social Media Marketer</li>
-          <li>Inbound & Media Certifications – HubSpot</li>
-          <li>Client commendation for qualified leads delivery</li>
+          <li>HubSpot Inbound & Media Certifications</li>
+          <li>Client commendations for lead success</li>
         </ul>
       </div>
     </section>
 
     <!-- Contact -->
-    <section class="text-center bg-blue-700 text-white py-12 px-4">
-      <h2 class="text-3xl font-semibold mb-3">📩 Let’s Connect</h2>
-      <p class="mb-4 text-lg">Open to full-time, part-time, or freelance opportunities.</p>
+    <section class="text-center bg-blue-700 text-white py-12 px-4 fade-section">
+      <h2 class="text-3xl font-semibold mb-3 flex justify-center items-center gap-3">
+        <i data-lucide="mail" class="w-7 h-7 animate-pulse text-white"></i>
+        Let’s Connect
+      </h2>
+      <p class="mb-4 text-lg">Open to full-time, part-time, or freelance roles.</p>
       <a href="mailto:buenaflorcaredianne@gmail.com" class="bg-white text-blue-900 font-semibold px-6 py-3 rounded hover:bg-gray-100 transition">
         Email Me
       </a>
     </section>
 
-    <footer class="text-center text-sm text-gray-300 py-6">
-      © 2025 Care Dianne Buenaflor – All rights reserved.
-    </footer>
-  </div>
+  </main>
+
+  <footer class="text-center text-sm text-gray-300 py-6">
+    © 2025 Care Dianne Buenaflor – All rights reserved.
+  </footer>
+</div>
+
+<script>
+  // Section reveal animation
+  const sections = document.querySelectorAll(".fade-section");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
