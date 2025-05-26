@@ -1,183 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dianne Buenaflor Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #111111;
-      --card-color: #f4f4f4;
-    }
-
-    [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --card-color: #1e1e1e;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
       padding: 2rem;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
     }
 
-    h1 {
-      font-size: 2rem;
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
     }
 
-    .toggle-btn {
-      padding: 0.5rem 1rem;
-      background: none;
-      border: 1px solid var(--text-color);
-      border-radius: 5px;
-      color: var(--text-color);
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .toggle-btn:hover {
-      background: var(--card-color);
+    header p {
+      font-size: 1.25rem;
+      color: #6b7280;
     }
 
     section {
-      margin-bottom: 3rem;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease-out;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card {
-      background-color: var(--card-color);
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    h2 {
-      margin-bottom: 1rem;
+    section h2 {
       font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.5rem;
     }
 
     ul {
-      padding-left: 1.2rem;
+      list-style: none;
+      padding-left: 0;
     }
 
-    li {
+    ul li {
       margin-bottom: 0.5rem;
     }
 
-    a {
-      color: var(--text-color);
-      text-decoration: underline;
+    .timeline-item {
+      margin-bottom: 1.5rem;
     }
 
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
+    .timeline-item span {
+      font-weight: bold;
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <h1>Dianne Buenaflor</h1>
-    <button class="toggle-btn" id="themeToggle">Toggle Dark Mode</button>
+    <p>Virtual Assistant | Professional Portfolio</p>
   </header>
 
-  <main>
-    <section class="card" id="summary">
-      <h2>Professional Summary</h2>
-      <p>An experienced virtual assistant with a background in administrative support, project coordination, and customer service. I thrive in fast-paced environments, value integrity, and am passionate about helping businesses grow efficiently.</p>
-    </section>
+  <section>
+    <h2>Professional Summary</h2>
+    <p>Dedicated and detail-oriented virtual assistant with strong organizational and communication skills. Experienced in managing administrative tasks, providing customer service, and supporting project coordination.</p>
+  </section>
 
-    <section class="card" id="skills">
-      <h2>Core Competencies</h2>
-      <ul>
-        <li>Administrative Support</li>
-        <li>Email and Calendar Management</li>
-        <li>Customer Service</li>
-        <li>Social Media Management</li>
-        <li>Data Entry & Research</li>
-      </ul>
-    </section>
+  <section>
+    <h2>Core Competencies</h2>
+    <ul>
+      <li>Administrative Support</li>
+      <li>Calendar Management</li>
+      <li>Email Handling</li>
+      <li>Data Entry & Research</li>
+      <li>Customer Service</li>
+      <li>Project Coordination</li>
+    </ul>
+  </section>
 
-    <section class="card" id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Bachelor of Arts in Communication, XYZ University</li>
-      </ul>
-    </section>
+  <section>
+    <h2>Education</h2>
+    <div class="timeline-item">
+      <span>BS in Business Administration</span><br />
+      University of Example | 2018 - 2022
+    </div>
+  </section>
 
-    <section class="card" id="experience">
-      <h2>Professional Experience</h2>
-      <ul>
-        <li>Virtual Assistant – ABC Company (2020–Present)</li>
-        <li>Admin Support – Freelance Projects (2018–2020)</li>
-      </ul>
-    </section>
+  <section>
+    <h2>Professional Experience</h2>
+    <div class="timeline-item">
+      <span>Virtual Assistant</span><br />
+      Freelance | 2022 - Present<br />
+      - Managed schedules, emails, and reports for multiple clients.
+    </div>
+    <div class="timeline-item">
+      <span>Administrative Assistant</span><br />
+      Company XYZ | 2020 - 2022<br />
+      - Provided clerical support and handled client communications.
+    </div>
+  </section>
 
-    <section class="card" id="trainings">
-      <h2>Trainings & Career Highlights</h2>
-      <ul>
-        <li>Certified Virtual Assistant Course – 2021</li>
-        <li>Social Media Strategy Workshop – 2022</li>
-      </ul>
-    </section>
+  <section>
+    <h2>Additional Information</h2>
+    <ul>
+      <li>Proficient in MS Office, Google Workspace, Canva</li>
+      <li>Strong written and verbal communication skills</li>
+    </ul>
+  </section>
 
-    <section class="card" id="more">
-      <h2>Additional Information</h2>
-      <p>Feel free to reach out via <a href="mailto:your-email@example.com">email</a>. Resume available upon request.</p>
-    </section>
-  </main>
-
-  <script>
-    // Dark Mode Toggle
-    const toggleBtn = document.getElementById('themeToggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
-    });
-
-    // Animate Sections on Scroll
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
+  <section>
+    <h2>Trainings & Career Highlights</h2>
+    <ul>
+      <li>Online Freelancing Bootcamp - 2023</li>
+      <li>Advanced Excel & Google Sheets Training</li>
+    </ul>
+  </section>
 </body>
+
 </html>
